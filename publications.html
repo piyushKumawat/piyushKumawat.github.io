@@ -1,0 +1,325 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="title" content="Piyush Kumar Kumawat – Publications">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <title>Piyush Kumar Kumawat – Publications</title>
+  <style>
+    :root {
+      --bg: #0f1117; --bg2: #161b27; --bg3: #1d2235;
+      --accent: #e87040; --accent2: #f0a060;
+      --text: #e8e6e0; --text-muted: #8a8fa8; --text-dim: #5a6080;
+      --border: #2a3050; --card: #181e30;
+      --tag-bg: rgba(232,112,64,0.12); --tag-border: rgba(232,112,64,0.35);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'DM Sans', sans-serif; font-weight: 300; background-color: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; }
+    .layout { display: grid; grid-template-columns: 280px 1fr; min-height: 100vh; max-width: 1160px; margin: 0 auto; }
+    .sidebar { position: sticky; top: 0; height: 100vh; padding: 48px 28px 48px 36px; border-right: 1px solid var(--border); display: flex; flex-direction: column; gap: 0; }
+    .name-block { margin-bottom: 32px; }
+    .name-first { font-family: 'DM Serif Display', serif; font-size: 2.1rem; color: var(--text); line-height: 1.1; display: block; }
+    .name-last { font-family: 'DM Serif Display', serif; font-size: 2.1rem; color: var(--accent); line-height: 1.1; display: block; }
+    .title-tag { margin-top: 10px; font-size: 0.8rem; font-weight: 400; color: var(--text-muted); letter-spacing: 0.06em; text-transform: uppercase; }
+    .divider { width: 36px; height: 2px; background: var(--accent); margin: 20px 0; border-radius: 2px; }
+    .nav-links { list-style: none; display: flex; flex-direction: column; gap: 4px; margin-bottom: auto; }
+    .nav-links a { text-decoration: none; color: var(--text-muted); font-size: 0.88rem; font-weight: 400; letter-spacing: 0.04em; padding: 5px 0; display: flex; align-items: center; gap: 10px; transition: color 0.2s; }
+    .nav-links a:hover, .nav-links a.active { color: var(--accent); }
+    .nav-links a .nav-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--text-dim); flex-shrink: 0; transition: background 0.2s; }
+    .nav-links a:hover .nav-dot, .nav-links a.active .nav-dot { background: var(--accent); }
+    .social-links { margin-top: 32px; display: flex; flex-direction: column; gap: 8px; }
+    .social-links a { color: var(--text-muted); text-decoration: none; font-size: 0.82rem; display: flex; align-items: center; gap: 8px; transition: color 0.2s; }
+    .social-links a:hover { color: var(--accent); }
+    .social-links i { width: 14px; text-align: center; }
+    .main { padding: 56px 52px; overflow: hidden; }
+    section { margin-bottom: 64px; }
+    .section-label { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); margin-bottom: 20px; display: flex; align-items: center; gap: 12px; }
+    .section-label::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+    .pub-group { margin-bottom: 36px; }
+    .pub-group-title { font-size: 0.78rem; letter-spacing: 0.1em; text-transform: uppercase; color: var(--text-dim); margin-bottom: 14px; font-weight: 500; }
+    .pub-item { padding: 16px 0; border-bottom: 1px solid var(--border); display: grid; grid-template-columns: 28px 1fr; gap: 12px; }
+    .pub-item:last-child { border-bottom: none; }
+    .pub-num { font-size: 0.75rem; color: var(--text-dim); font-weight: 500; padding-top: 2px; text-align: right; }
+    .pub-title { font-size: 0.95rem; color: var(--text); font-weight: 400; line-height: 1.5; margin-bottom: 3px; }
+    .pub-authors { font-size: 0.82rem; color: var(--text-muted); margin-bottom: 3px; }
+    .pub-authors .me { color: var(--text); text-decoration: underline; text-underline-offset: 2px; }
+    .pub-venue { font-size: 0.82rem; color: var(--text-dim); font-style: italic; }
+    .pub-tags { display: flex; gap: 6px; margin-top: 6px; flex-wrap: wrap; }
+    .pub-tag { font-size: 0.7rem; border: 1px solid var(--border); color: var(--text-dim); padding: 1px 7px; border-radius: 2px; }
+    .pub-tag.journal { border-color: rgba(232,112,64,0.3); color: var(--accent2); }
+    .pub-tag.review { border-color: rgba(100,150,255,0.3); color: #7090e0; }
+    .pub-tag a { color: inherit; text-decoration: none; }
+    .pub-tag a:hover { text-decoration: underline; }
+    footer { font-size: 0.75rem; color: var(--text-dim); padding: 20px 0 40px; }
+    .profilepic { width: 160px; border-radius: 8px; display: block; margin-bottom: 24px; }
+    @media (max-width: 860px) {
+      .layout { grid-template-columns: 1fr; }
+      .sidebar { position: static; height: auto; padding: 32px 24px; border-right: none; border-bottom: 1px solid var(--border); }
+      .nav-links { flex-direction: row; flex-wrap: wrap; }
+      .main { padding: 36px 24px; }
+    }
+  </style>
+</head>
+<body>
+<div class="layout">
+  <aside class="sidebar">
+    <img lsrc="images/IMG_3874.jpg" class="profilepic">
+    <div class="name-block">
+      <span class="name-first">Piyush</span>
+      <span class="name-last">Kumawat</span>
+      <div class="title-tag">PhD Candidate · Chemical Engineering</div>
+    </div>
+    <div class="divider"></div>
+    <ul class="nav-links">
+      <li><a href="index.html"><span class="nav-dot"></span>About</a></li>
+      <li><a href="index.html#news"><span class="nav-dot"></span>News</a></li>
+      <li><a href="experience.html"><span class="nav-dot"></span>Experience</a></li>
+      <li><a href="publications.html" class="active"><span class="nav-dot"></span>Publications</a></li>
+    </ul>
+    <div class="social-links">
+      <a href="Piyush_Resume.pdf" target="_blank"><i class="fas fa-file-alt"></i> Curriculum Vitae</a>
+      <a href="https://scholar.google.com/citations?user=ayS-D9AAAAAJ&hl=en" target="_blank"><i class="fab fa-google"></i> Google Scholar</a>
+      <a href="mailto:piyush.kumawat@utah.edu"><i class="fas fa-envelope"></i> piyush.kumawat@utah.edu</a>
+      <a href="https://www.linkedin.com/in/pkkumawat24" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+      <a href="https://piyushkumawat.github.io" target="_blank"><i class="fas fa-globe"></i> GitHub Page</a>
+    </div>
+  </aside>
+
+  <main class="main">
+    <section id="publications">
+      <div class="section-label">Publications</div>
+
+      <!-- Geothermal -->
+      <div class="pub-group">
+        <div class="pub-group-title">Geothermal Energy &amp; Reservoir Modeling</div>
+
+        <div class="pub-item">
+          <div class="pub-num">—</div>
+          <div class="pub-content">
+            <div class="pub-title">Forecasting the Performance of Utah FORGE EGS Reservoir</div>
+            <div class="pub-authors"><span class="me">Kumawat, P.K.</span>, Upchurch, E., Deo, M., McLennan, J.</div>
+            <div class="pub-venue">Geothermics (Under Review), 2026</div>
+            <div class="pub-tags"><span class="pub-tag review">Under Review</span><span class="pub-tag journal">Journal</span></div>
+          </div>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-num">—</div>
+          <div class="pub-content">
+            <div class="pub-title">Evaluating Performance of Conceptual Discrete Fracture Networks: A Utah FORGE Case Study</div>
+            <div class="pub-authors"><span class="me">Kumawat, P.K.</span>, Munday, L.B., Podgorney, R., Deo, M., McLennan, J.</div>
+            <div class="pub-venue">Computational Geosciences (Under Review), 2026</div>
+            <div class="pub-tags"><span class="pub-tag review">Under Review</span><span class="pub-tag journal">Journal</span></div>
+          </div>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-num">—</div>
+          <div class="pub-content">
+            <div class="pub-title">Comparative Evaluation of Crosslinked CMHPG and Slickwater Fracturing Fluids in Enhanced Geothermal Systems</div>
+            <div class="pub-authors">Li, P., <span class="me">Kumawat, P.K.</span>, Dvory, N.Z., Finnila, A., England, K., McLennan, J.</div>
+            <div class="pub-venue">Geothermics (Under Review), 2024</div>
+            <div class="pub-tags"><span class="pub-tag review">Under Review</span><span class="pub-tag journal">Journal</span></div>
+          </div>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-num">—</div>
+          <div class="pub-content">
+            <div class="pub-title">Periodic Flow-Direction Reversal in EGS: Effects on Cold-Front Evolution and Heat Sweep</div>
+            <div class="pub-authors"><span class="me">Kumawat, P.K.</span>, Deo, M.</div>
+            <div class="pub-venue">ARMA 60th US Rock Mechanics Symposium (Under Review), 2025</div>
+            <div class="pub-tags"><span class="pub-tag review">Under Review</span></div>
+          </div>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-num">1</div>
+          <div class="pub-content">
+            <div class="pub-title">Tradeoffs Between Planar and Geologic Discrete Fracture Networks for EGS: Insights from Utah FORGE</div>
+            <div class="pub-authors"><span class="me">Kumawat, P.K.</span>, Munday, L.B., Podgorney, R., Deo, M., McLennan, J.</div>
+            <div class="pub-venue">51st Workshop on Geothermal Reservoir Engineering, Stanford University, 2026</div>
+            <div class="pub-tags"><span class="pub-tag">Conference</span></div>
+          </div>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-num">2</div>
+          <div class="pub-content">
+            <div class="pub-title">Understanding Heat Recovery in EGS: Insights from Gringarten Type Curves and Numerical Simulation</div>
+            <div class="pub-authors"><span class="me">Kumawat, P.K.</span>, McLennan, J., Deo, M.</div>
+            <div class="pub-venue">Geothermal Rising Conference, Reno, Nevada, 2025</div>
+            <div class="pub-tags"><span class="pub-tag">Conference</span></div>
+          </div>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-num">3</div>
+          <div class="pub-content">
+            <div class="pub-title">Dynamic Reservoir Modeling of the Utah FORGE Enhanced Geothermal Project Using Fast Marching Method</div>
+            <div class="pub-authors">Chan, C., <span class="me">Kumawat, P.K.</span>, Deo, M., Datta-Gupta, A.</div>
+            <div class="pub-venue">SPE Energy Transition Symposium, SPE-228338-MS, 2025</div>
+            <div class="pub-tags"><span class="pub-tag">Conference</span><span class="pub-tag"><a href="https://doi.org/10.2118/228338-MS" target="_blank">DOI</a></span></div>
+          </div>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-num">4</div>
+          <div class="pub-content">
+            <div class="pub-title">Simplified Fracture Model for Numerical Simulation of EGS: A Utah FORGE Case Study</div>
+            <div class="pub-authors"><span class="me">Kumawat, P.K.</span>, Jin, W., Munday, L.B., Podgorney, R., Earnest, E., Upchurch, E.R., Tozzi, M., Deo, M., McLennan, J., Moore, J.</div>
+            <div class="pub-venue">50th Workshop on Geothermal Reservoir Engineering, Stanford University, 2025</div>
+            <div class="pub-tags"><span class="pub-tag">Conference</span></div>
+          </div>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-num">5</div>
+          <div class="pub-content">
+            <div class="pub-title">Effect of Fracture Connectivity Between Production and Injection Wells in EGS</div>
+            <div class="pub-authors"><span class="me">Kumawat, P.K.</span>, McLennan, J., Deo, M.</div>
+            <div class="pub-venue">ARMA 59th US Rock Mechanics Symposium, ARMA-2025-0106, 2025</div>
+            <div class="pub-tags"><span class="pub-tag">Conference</span><span class="pub-tag"><a href="https://doi.org/10.56952/ARMA2025-0106" target="_blank">DOI</a></span></div>
+          </div>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-num">6</div>
+          <div class="pub-content">
+            <div class="pub-title">A Dynamic 2D Borehole Thermal Energy Storage (BTES) Model for Enhanced Computational Efficiency</div>
+            <div class="pub-authors">Bahr, M.T., <span class="me">Kumawat, P.K.</span>, Billing, B., Powell, K.</div>
+            <div class="pub-venue">Case Studies in Thermal Engineering, 75:107054, 2024</div>
+            <div class="pub-tags"><span class="pub-tag journal">Journal</span><span class="pub-tag"><a href="https://doi.org/10.1016/j.csite.2025.107054" target="_blank">DOI</a></span></div>
+          </div>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-num">7</div>
+          <div class="pub-content">
+            <div class="pub-title">Performance Analysis of Borehole Thermal Energy Storage Systems using Surrogate Modeling</div>
+            <div class="pub-authors"><span class="me">Kumawat, P.K.</span>, Deo, M.</div>
+            <div class="pub-venue">Renewable Energy, 266:125650, 2026</div>
+            <div class="pub-tags"><span class="pub-tag journal">Journal</span><span class="pub-tag"><a href="https://doi.org/10.1016/j.renene.2026.125650" target="_blank">DOI</a></span></div>
+          </div>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-num">8</div>
+          <div class="pub-content">
+            <div class="pub-title">Sensitivity Analysis of Borehole Thermal Energy Storage (BTES): Examining Key Factors for System Optimization</div>
+            <div class="pub-authors"><span class="me">Kumawat, P.K.</span>, Zhou, H., Kitz, K., McLennan, J., Powell, K., Deo, M.</div>
+            <div class="pub-venue">Energy Storage and Savings, 3(3):218–230, 2024</div>
+            <div class="pub-tags"><span class="pub-tag journal">Journal</span><span class="pub-tag"><a href="https://doi.org/10.1016/j.enss.2024.04.003" target="_blank">DOI</a></span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- ML & AI -->
+      <div class="pub-group">
+        <div class="pub-group-title">Machine Learning &amp; AI for Engineering Systems</div>
+
+        <div class="pub-item">
+          <div class="pub-num">9</div>
+          <div class="pub-content">
+            <div class="pub-title">Escalating Operator Assurance for Deep Neural Network Fault Detection with Multiple-Steady State Operations</div>
+            <div class="pub-authors">Bhakte, A., <span class="me">Kumawat, P.K.</span>, Srinivasan, R.</div>
+            <div class="pub-venue">Chemical Engineering Science, 299:120493, 2024</div>
+            <div class="pub-tags"><span class="pub-tag journal">Journal</span><span class="pub-tag"><a href="https://doi.org/10.1016/j.ces.2024.120493" target="_blank">DOI</a></span></div>
+          </div>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-num">10</div>
+          <div class="pub-content">
+            <div class="pub-title">Feasibility Analysis in Batch Process: A Machine Learning Approach</div>
+            <div class="pub-authors"><span class="me">Kumawat, P.K.</span>, Chaturvedi, N.D.</div>
+            <div class="pub-venue">Chemical Engineering Transactions, 88:451–456, 2021</div>
+            <div class="pub-tags"><span class="pub-tag">Conference</span><span class="pub-tag"><a href="https://doi.org/10.3303/CET2188075" target="_blank">DOI</a></span></div>
+          </div>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-num">11</div>
+          <div class="pub-content">
+            <div class="pub-title">A Deep Learning Framework to Predict the Consumption of Petroleum Products</div>
+            <div class="pub-authors">Das, A., <span class="me">Kumawat, P.K.</span>, Chaturvedi, N.D., Shukla, G.</div>
+            <div class="pub-venue">16th Conf. on Sustainable Development of Energy, Water and Environment Systems, 2021</div>
+            <div class="pub-tags"><span class="pub-tag">Conference</span></div>
+          </div>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-num">12</div>
+          <div class="pub-content">
+            <div class="pub-title">A Data-Driven Approach to Plan Electricity Production from Diesel Engines with Constrained Parameters</div>
+            <div class="pub-authors"><span class="me">Kumawat, P.K.</span>, Chaturvedi, N.D.</div>
+            <div class="pub-venue">Computer Aided Chemical Engineering, 50:1761–1767, 2021</div>
+            <div class="pub-tags"><span class="pub-tag">Conference</span><span class="pub-tag"><a href="https://doi.org/10.1016/B978-0-323-88506-5.50273-4" target="_blank">DOI</a></span></div>
+          </div>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-num">13</div>
+          <div class="pub-content">
+            <div class="pub-title">A Study to Target Energy Consumption in Wastewater Treatment Plant using Machine Learning Algorithms</div>
+            <div class="pub-authors">Das, A., <span class="me">Kumawat, P.K.</span>, Chaturvedi, N.D.</div>
+            <div class="pub-venue">Computer Aided Chemical Engineering, 50:1511–1516, 2021</div>
+            <div class="pub-tags"><span class="pub-tag">Conference</span><span class="pub-tag"><a href="https://doi.org/10.1016/B978-0-323-88506-5.50233-3" target="_blank">DOI</a></span></div>
+          </div>
+        </div>
+      </div>
+
+      <!-- Optimization -->
+      <div class="pub-group">
+        <div class="pub-group-title">Mathematical Modeling &amp; Optimization</div>
+
+        <div class="pub-item">
+          <div class="pub-num">14</div>
+          <div class="pub-content">
+            <div class="pub-title">Robust Resource Targeting in Continuous and Batch Process</div>
+            <div class="pub-authors"><span class="me">Kumawat, P.K.</span>, Chaturvedi, N.D.</div>
+            <div class="pub-venue">Clean Technologies and Environmental Policy, 24:273–288, 2022</div>
+            <div class="pub-tags"><span class="pub-tag journal">Journal</span><span class="pub-tag"><a href="https://doi.org/10.1007/s10098-021-02118-8" target="_blank">DOI</a></span></div>
+          </div>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-num">15</div>
+          <div class="pub-content">
+            <div class="pub-title">Multi-objective Optimization for Sustainable Production Planning</div>
+            <div class="pub-authors"><span class="me">Kumawat, P.K.</span>, Sinha, R.K., Chaturvedi, N.D.</div>
+            <div class="pub-venue">Environmental Progress and Sustainable Energy, 40(6):e13741, 2021</div>
+            <div class="pub-tags"><span class="pub-tag journal">Journal</span><span class="pub-tag"><a href="https://doi.org/10.1002/ep.13741" target="_blank">DOI</a></span></div>
+          </div>
+        </div>
+
+        <div class="pub-item">
+          <div class="pub-num">16</div>
+          <div class="pub-content">
+            <div class="pub-title">Constrained Production Planning with Parametric Uncertainties</div>
+            <div class="pub-authors">Chaturvedi, N.D., <span class="me">Kumawat, P.K.</span></div>
+            <div class="pub-venue">CRC Press, Optimization for Energy Systems and Supply Chains, pp. 133–149, 2022</div>
+            <div class="pub-tags"><span class="pub-tag journal">Book Chapter</span><span class="pub-tag"><a href="https://doi.org/10.1201/9781003240228" target="_blank">DOI</a></span></div>
+          </div>
+        </div>
+      </div>
+    </section>
+
+    <footer>&copy; Piyush Kumar Kumawat · <a href="mailto:piyush.kumawat@utah.edu" style="color:var(--text-dim);text-decoration:none;">piyush.kumawat@utah.edu</a></footer>
+  </main>
+</div>
+<script>
+  (function() {
+    document.querySelectorAll('img[lsrc]').forEach(function(img) {
+      var lsrc = img.getAttribute('lsrc');
+      if (lsrc) { var i = new Image(); i.onload = function() { img.src = this.src; }; i.src = lsrc; }
+    });
+  })();
+</script>
+</body>
+</html>

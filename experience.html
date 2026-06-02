@@ -1,0 +1,188 @@
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="title" content="Piyush Kumar Kumawat – Experience">
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+  <link href="https://fonts.googleapis.com/css2?family=DM+Serif+Display:ital@0;1&family=DM+Sans:ital,opsz,wght@0,9..40,300;0,9..40,400;0,9..40,500;1,9..40,300&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css">
+  <title>Piyush Kumar Kumawat – Experience</title>
+  <style>
+    :root {
+      --bg: #0f1117; --bg2: #161b27; --bg3: #1d2235;
+      --accent: #e87040; --accent2: #f0a060;
+      --text: #e8e6e0; --text-muted: #8a8fa8; --text-dim: #5a6080;
+      --border: #2a3050; --card: #181e30;
+      --tag-bg: rgba(232,112,64,0.12); --tag-border: rgba(232,112,64,0.35);
+    }
+    *, *::before, *::after { box-sizing: border-box; margin: 0; padding: 0; }
+    html { scroll-behavior: smooth; }
+    body { font-family: 'DM Sans', sans-serif; font-weight: 300; background-color: var(--bg); color: var(--text); font-size: 16px; line-height: 1.7; }
+    .layout { display: grid; grid-template-columns: 280px 1fr; min-height: 100vh; max-width: 1160px; margin: 0 auto; }
+    .sidebar { position: sticky; top: 0; height: 100vh; padding: 48px 28px 48px 36px; border-right: 1px solid var(--border); display: flex; flex-direction: column; gap: 0; }
+    .name-block { margin-bottom: 32px; }
+    .name-first { font-family: 'DM Serif Display', serif; font-size: 2.1rem; color: var(--text); line-height: 1.1; display: block; }
+    .name-last { font-family: 'DM Serif Display', serif; font-size: 2.1rem; color: var(--accent); line-height: 1.1; display: block; }
+    .title-tag { margin-top: 10px; font-size: 0.8rem; font-weight: 400; color: var(--text-muted); letter-spacing: 0.06em; text-transform: uppercase; }
+    .divider { width: 36px; height: 2px; background: var(--accent); margin: 20px 0; border-radius: 2px; }
+    .nav-links { list-style: none; display: flex; flex-direction: column; gap: 4px; margin-bottom: auto; }
+    .nav-links a { text-decoration: none; color: var(--text-muted); font-size: 0.88rem; font-weight: 400; letter-spacing: 0.04em; padding: 5px 0; display: flex; align-items: center; gap: 10px; transition: color 0.2s; }
+    .nav-links a:hover, .nav-links a.active { color: var(--accent); }
+    .nav-links a .nav-dot { width: 5px; height: 5px; border-radius: 50%; background: var(--text-dim); flex-shrink: 0; transition: background 0.2s; }
+    .nav-links a:hover .nav-dot, .nav-links a.active .nav-dot { background: var(--accent); }
+    .social-links { margin-top: 32px; display: flex; flex-direction: column; gap: 8px; }
+    .social-links a { color: var(--text-muted); text-decoration: none; font-size: 0.82rem; display: flex; align-items: center; gap: 8px; transition: color 0.2s; }
+    .social-links a:hover { color: var(--accent); }
+    .social-links i { width: 14px; text-align: center; }
+    .main { padding: 56px 52px; overflow: hidden; }
+    section { margin-bottom: 64px; }
+    .section-label { font-size: 0.72rem; font-weight: 500; letter-spacing: 0.14em; text-transform: uppercase; color: var(--accent); margin-bottom: 20px; display: flex; align-items: center; gap: 12px; }
+    .section-label::after { content: ''; flex: 1; height: 1px; background: var(--border); }
+    .exp-item { padding: 20px 0; border-bottom: 1px solid var(--border); }
+    .exp-item:last-child { border-bottom: none; }
+    .exp-header { display: flex; justify-content: space-between; align-items: flex-start; gap: 16px; margin-bottom: 4px; }
+    .exp-title { font-family: 'DM Serif Display', serif; font-size: 1.05rem; color: var(--text); }
+    .exp-date { font-size: 0.78rem; color: var(--text-dim); white-space: nowrap; padding-top: 3px; }
+    .exp-org { font-size: 0.85rem; color: var(--accent2); margin-bottom: 8px; }
+    .exp-bullets { list-style: none; display: flex; flex-direction: column; gap: 3px; }
+    .exp-bullets li { font-size: 0.88rem; color: var(--text-muted); padding-left: 14px; position: relative; }
+    .exp-bullets li::before { content: '–'; position: absolute; left: 0; color: var(--text-dim); }
+    .edu-item { padding: 16px 0; border-bottom: 1px solid var(--border); display: flex; justify-content: space-between; gap: 16px; }
+    .edu-item:last-child { border-bottom: none; }
+    .edu-degree { font-size: 0.95rem; color: var(--text); }
+    .edu-inst { font-size: 0.85rem; color: var(--accent2); margin-top: 2px; }
+    .edu-year { font-size: 0.8rem; color: var(--text-dim); white-space: nowrap; padding-top: 3px; }
+    .award-list { list-style: none; display: flex; flex-direction: column; }
+    .award-list li { padding: 10px 0; border-bottom: 1px solid var(--border); font-size: 0.9rem; color: var(--text-muted); display: flex; align-items: baseline; gap: 10px; }
+    .award-list li:last-child { border-bottom: none; }
+    .award-list li::before { content: '✦'; color: var(--accent); font-size: 0.65rem; flex-shrink: 0; }
+    footer { font-size: 0.75rem; color: var(--text-dim); padding: 20px 0 40px; }
+    .profilepic { width: 160px; border-radius: 8px; display: block; margin-bottom: 24px; }
+    @media (max-width: 860px) {
+      .layout { grid-template-columns: 1fr; }
+      .sidebar { position: static; height: auto; padding: 32px 24px; border-right: none; border-bottom: 1px solid var(--border); }
+      .nav-links { flex-direction: row; flex-wrap: wrap; }
+      .main { padding: 36px 24px; }
+      .exp-header { flex-direction: column; gap: 2px; }
+    }
+  </style>
+</head>
+<body>
+<div class="layout">
+  <aside class="sidebar">
+    <img lsrc="images/IMG_3874.jpg" class="profilepic">
+    <div class="name-block">
+      <span class="name-first">Piyush</span>
+      <span class="name-last">Kumawat</span>
+      <div class="title-tag">PhD Candidate · Chemical Engineering</div>
+    </div>
+    <div class="divider"></div>
+    <ul class="nav-links">
+      <li><a href="index.html"><span class="nav-dot"></span>About</a></li>
+      <li><a href="index.html#news"><span class="nav-dot"></span>News</a></li>
+      <li><a href="experience.html" class="active"><span class="nav-dot"></span>Experience</a></li>
+      <li><a href="publications.html"><span class="nav-dot"></span>Publications</a></li>
+    </ul>
+    <div class="social-links">
+      <a href="Piyush_Resume.pdf" target="_blank"><i class="fas fa-file-alt"></i> Curriculum Vitae</a>
+      <a href="https://scholar.google.com/citations?user=ayS-D9AAAAAJ&hl=en" target="_blank"><i class="fab fa-google"></i> Google Scholar</a>
+      <a href="mailto:piyush.kumawat@utah.edu"><i class="fas fa-envelope"></i> piyush.kumawat@utah.edu</a>
+      <a href="https://www.linkedin.com/in/pkkumawat24" target="_blank"><i class="fab fa-linkedin"></i> LinkedIn</a>
+      <a href="https://piyushkumawat.github.io" target="_blank"><i class="fas fa-globe"></i> GitHub Page</a>
+    </div>
+  </aside>
+
+  <main class="main">
+
+    <section id="experience">
+      <div class="section-label">Experience</div>
+
+      <div class="exp-item">
+        <div class="exp-header">
+          <div class="exp-title">Graduate Intern – Geothermal &amp; Subsurface Energy Systems</div>
+          <div class="exp-date">May 2025 – Aug 2025 · May 2026 – Present</div>
+        </div>
+        <div class="exp-org">Idaho National Laboratory · Idaho Falls, ID</div>
+        <ul class="exp-bullets">
+          <li>Developed coupled Thermo-Hydro-Mechanical (THM) finite element models for EGS reservoirs.</li>
+          <li>Built and evaluated conceptual DFN models, reducing computational cost by 50% while preserving THM stability predictions.</li>
+          <li>Contributed to development and validation of the fully coupled THMC simulator, FALCON.</li>
+          <li>Executed large-scale FEM simulations to analyze stress redistribution and thermal drawdown behavior.</li>
+          <li>Enhanced computational performance through solver optimization and mesh refinement strategies.</li>
+        </ul>
+      </div>
+
+      <div class="exp-item">
+        <div class="exp-header">
+          <div class="exp-title">Graduate Research Assistant</div>
+          <div class="exp-date">Nov 2022 – Present</div>
+        </div>
+        <div class="exp-org">Energy &amp; Geoscience Institute, University of Utah · Salt Lake City, UT</div>
+        <ul class="exp-bullets">
+          <li>Developed field-scale reservoir simulation models for Utah FORGE EGS to evaluate fracture connectivity, thermal drawdown, and long-term sustainability.</li>
+          <li>Performed history matching and DFN-based fracture characterization to improve geothermal forecast reliability.</li>
+          <li>Built surrogate modeling frameworks to accelerate reservoir forecasting and explore EGS design space.</li>
+          <li>Conducted uncertainty quantification and sensitivity analysis for robust geothermal performance prediction.</li>
+          <li>Optimized Borehole Thermal Energy Storage (BTES) system for Vernal City, Utah.</li>
+          <li>Designed and deployed a pilot-scale heat exchanger for low-temperature geothermal applications.</li>
+        </ul>
+      </div>
+
+    </section>
+
+    <section id="education">
+      <div class="section-label">Education</div>
+      <div class="edu-item">
+        <div>
+          <div class="edu-degree">Ph.D., Chemical Engineering</div>
+          <div class="edu-inst">University of Utah · Salt Lake City, UT</div>
+        </div>
+        <div class="edu-year">2022 – Present</div>
+      </div>
+      <div class="edu-item">
+        <div>
+          <div class="edu-degree">M.Tech (Research), Chemical Engineering</div>
+          <div class="edu-inst">Indian Institute of Technology Patna · India</div>
+        </div>
+        <div class="edu-year">2020 – 2022</div>
+      </div>
+      <div class="edu-item">
+        <div>
+          <div class="edu-degree">Bachelor of Engineering, Chemical Engineering</div>
+          <div class="edu-inst">Thapar Institute of Engineering &amp; Technology · India</div>
+        </div>
+        <div class="edu-year">2014 – 2018</div>
+      </div>
+    </section>
+
+    <section id="awards">
+      <div class="section-label">Awards &amp; Service</div>
+      <ul class="award-list">
+        <li>Kistler Graduate Fellowship – University of Utah</li>
+        <li>Travel Award – Geothermal Rising Conference, Reno, NV (2025)</li>
+        <li>SERB Master's Fellowship – Government of India</li>
+        <li>Academic Scholarship for Undergraduate Studies – Thapar Institute</li>
+        <li>Invited Talk: <em>Longevity of Utah FORGE</em> – Utah Geological Survey, DNR (June 2024)</li>
+        <li>Invited Talk: <em>How to Build a Career in Research?</em> – Thapar Institute (Jan 2023)</li>
+        <li>Teaching Assistant: Chemical Process Safety (CHEN 3253) &amp; Geothermal Engineering (CHEN 6960), UoU</li>
+        <li>Social Media &amp; Outreach Manager (2024–2026) – ARMA Student Chapter, University of Utah</li>
+        <li>Student Volunteer &amp; Session Chair Assistant – Geothermal Rising Conference (2025)</li>
+        <li>Professional Memberships: ARMA · IMAGE · SPE · GRC · AIChE</li>
+      </ul>
+    </section>
+
+    <footer>&copy; Piyush Kumar Kumawat · <a href="mailto:piyush.kumawat@utah.edu" style="color:var(--text-dim);text-decoration:none;">piyush.kumawat@utah.edu</a></footer>
+  </main>
+</div>
+<script>
+  (function() {
+    document.querySelectorAll('img[lsrc]').forEach(function(img) {
+      var lsrc = img.getAttribute('lsrc');
+      if (lsrc) { var i = new Image(); i.onload = function() { img.src = this.src; }; i.src = lsrc; }
+    });
+  })();
+</script>
+</body>
+</html>
